@@ -3,5 +3,9 @@ import App from "./App.vue";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import { vue3Debounce } from "vue-debounce";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+
+app.directive("debounce", vue3Debounce());
+app.mount("#app");

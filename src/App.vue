@@ -59,9 +59,19 @@ export default {
         :api-url="apiUrl"
         :api-path="apiPath"
         :parentProducts="products"
+        :get-carts="getCarts"
       />
-      <carts-component :carts="carts" :api-url="apiUrl" :api-path="apiPath" />
-      <form-component />
+      <carts-component
+        :carts="carts"
+        :api-url="apiUrl"
+        :api-path="apiPath"
+        :get-carts="getCarts"
+      />
+      <form-component
+        :api-url="apiUrl"
+        :api-path="apiPath"
+        :get-carts="getCarts"
+      />
     </div>
   </div>
 </template>

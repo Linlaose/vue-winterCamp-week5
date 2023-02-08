@@ -7,6 +7,7 @@ export default {
     product: Object,
     apiUrl: String,
     apiPath: String,
+    getCarts: Function,
   },
   data() {
     return {
@@ -32,6 +33,7 @@ export default {
         .then((res) => {
           alert(res.data.message);
           this.productModal.hide();
+          this.getCarts();
         })
         .catch((err) => {
           alert(err);

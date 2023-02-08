@@ -8,6 +8,7 @@ export default {
     apiUrl: String,
     apiPath: String,
     parentProducts: Object,
+    getCarts: Function,
   },
   data() {
     return {
@@ -53,6 +54,7 @@ export default {
         .post(url, { data })
         .then((res) => {
           alert(res.data.message);
+          this.getCarts();
         })
         .catch((err) => {
           alert(err);
